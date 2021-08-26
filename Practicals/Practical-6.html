@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical - 6</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .main-container {
+            width: 100%;
+            display: inline-flex;
+        }
+        .box {
+            width: 20%;
+            background-color: white;
+            padding: 15px;
+            margin: 20px 15px;
+            border-radius: 12px;
+            display: grid;
+            overflow: hidden;
+        }
+        .image-box {
+            display: flex;
+            justify-content: center;
+            box-shadow:2px 2px 10px rgb(53, 51, 51);
+            margin-bottom: 10px;
+            border-radius: 12px;
+            height: 142px;
+            
+        }
+        .image-box img {
+            width: 100%;
+            border-radius: 12px;
+        }
+        .box h3 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .box p{
+            overflow: hidden;
+        }
+        .button a {
+            text-decoration: none;
+            background-color: #45d0e6;
+            display: block;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 12px;
+            margin: 10px auto;
+        }
+        .button a:hover {
+            background-color: #DF2E2E;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(71 119 108);">
+    <h1 style="color: white; text-align: center; margin: 20px;">Practical-6: Create following layout using CSS layout properties.</h1>
+    <div class="main-container">
+        <div class="box">
+            <div class="image-box">
+                <img src="../Images/Introduction-to-html.png" alt="HTML">
+            </div>
+            <div class="heading">
+                <h3>Introduction to HTML</h3>
+            </div>
+            <p>HTML stands for Hyper Text Markup Language. HTML is the standard markup language for creating Web pages. HTML describes the structure of a Web page. HTML consists of a series of elements.</p>
+            <div class="button">
+                <a href="Practical-6-html.html" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image-box">
+                <img src="../Images/Introduction-to-css.png" alt="CSS">
+            </div>
+            <h3>Introduction to CSS</h3>
+            <p>CSS stands for Cascading Style Sheets. CSS describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves a lot of work. It can control the layout of multiple web pages all at once.</p>
+            <div class="button">
+                <a href="Practical-6-css.html" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image-box">
+                <img src="../Images/jQuery.png" alt="jQuery">
+            </div>
+            <h3>Introduction to jQuery</h3>
+            <p>jQuery is a fast, small, cross-platform and feature-rich JavaScript library. It is designed to simplify the client-side scripting of HTML. It makes things like HTML document traversal and manipulation, animation, event handling, and AJAX very simple.</p>
+            <div class="button">
+                <a href="Practical-6-jquery.html" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image-box">
+                <img src="../Images/bootstrap.png" alt="Bootstrap">
+            </div>
+            <h3>Introduction to Bootstrap</h3>
+            <p>Bootstrap is a free and open-source tool collection for creating responsive websites and web applications. It is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first websites.</p>
+            <div class="button">
+                <a href="Practical-6-bootstrap.html" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
