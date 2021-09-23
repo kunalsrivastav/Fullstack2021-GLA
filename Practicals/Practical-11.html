@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Practical - 11</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            footer {
+                background-color: #406343;
+                height: 100%;
+                width: 100%;
+            }
+            .section1 {
+                display: flex;
+                justify-content: center;
+            }
+            .about {
+                width: 400px;
+                margin: 15px;
+                padding: 5px;
+                /* border: 1px solid black; */
+            }
+            .about h2 {
+                text-transform: uppercase;
+                color: white;
+            }
+            .about p {
+                color: #f3efcc;
+            }
+            .categories,
+            .quicklinks {
+                /* border: 1px solid black; */
+                margin: 15px;
+                padding: 5px;
+                width: 180px;
+                min-width: 170px;
+            }
+            .categories h2,
+            .quicklinks h2 {
+                color: white;
+                text-transform: uppercase;
+            }
+            .categories ul li,
+            .quicklinks ul li {
+                list-style: none;
+            }
+            .categories ul li a,
+            .quicklinks ul li a {
+                text-decoration: none;
+                color: #f3efcc;
+            }
+            .categories ul li a:hover,
+            .quicklinks ul li a:hover {
+                color: orange;
+            }
+            .contact {
+                /* border: 1px solid black; */
+                margin: 15px;
+                padding: 5px;
+                min-width: 300px;
+            }
+            .contact h2 {
+                text-transform: uppercase;
+                color: white;
+            }
+            .contact p {
+                color: #f3efcc;
+            }
+            .contact p i {
+                margin-right: 10px;
+            }
+            .contact p a {
+                text-decoration: none;
+                color: #f3efcc;
+            }
+            .contact p a:hover {
+                color: orange;
+            }
+            .section2 {
+                height: 90px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-top: 1px solid #fcffa6;
+                border-bottom: 1px solid #fcffa6;
+            }
+            .section2 h1 {
+                display: inline-flex;
+                color: #f3efcc;
+                font-size: 30px;
+                margin-right: 10px;
+            }
+            .section2 a {
+                text-decoration: none;
+                padding: 15px;
+                color: #f3efcc;
+                background-color: red;
+                border-radius: 25px;
+            }
+            .section2 a:hover {
+                background-color: #14279b;
+            }
+            .social {
+                display: flex;
+                padding: 20px;
+                justify-content: center;
+            }
+            .social ul {
+                list-style: none;
+            }
+            .social ul li {
+                display: inline-block;
+                background-color: #112031;
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                padding: 10px;
+            }
+            .social ul li a i {
+                color: white;
+                font-size: 30px;
+                line-height: 50px;
+                margin-left: 12px;
+            }
+            .social ul li:nth-child(1):hover {
+                background-color: cyan;
+            }
+            .social ul li:nth-child(2):hover {
+                background-color: pink;
+            }
+            .social ul li:nth-child(3):hover {
+                background-color: goldenrod;
+            }
+            .social ul li:nth-child(4):hover {
+                background-color: green;
+            }
+            .social ul li:nth-child(5):hover {
+                background-color: orange;
+            }
+            .copyright {
+                background-color: #32502e;
+                padding: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+            .copyright p {
+                padding: 5px;
+                color: #f3efcc;
+            }
+            .copyright p:hover {
+                border-bottom: 2px solid orange;
+                color: white;
+            }
+            @media (max-width: 1000px) {
+                .section1 {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                }
+                .about {
+                    display: block;
+                    width: 100%;
+                }
+            }
+            @media (max-width: 770px) {
+                .section1 {
+                    display: block;
+                    padding: 15px;
+                }
+                .about {
+                    display: block;
+                    width: 100%;
+                    margin: 0;
+                }
+                .categories,
+                .contact,
+                .quicklinks {
+                    margin: 15px 0;
+                }
+            }
+            @media (max-width: 425px) {
+                .contact {
+                    min-width: auto;
+                }
+                .social {
+                    display: flex;
+                    padding: 20px;
+                    justify-content: center;
+                }
+                .social ul li {
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    padding: 10px;
+                }
+                .social ul li a i {
+                    color: white;
+                    font-size: 18px;
+                    line-height: 20px;
+                    margin: auto;
+                    text-align: center;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <footer>
+            <section class="section1">
+                <section class="about">
+                    <h2>About</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Mollitia ut sapiente laudantium qui nulla eligendi,
+                        quidem consequatur sint dolor nemo harum et. Voluptas,
+                        nam. Officiis provident est earum voluptates maxime
+                        autem velit obcaecati ipsam dolor ab totam recusandae
+                        voluptatibus nulla, magnam molestiae cum similique
+                        praesentium et, repellendus amet. Assumenda, illo?
+                    </p>
+                </section>
+                <section class="categories">
+                    <h2>Categories</h2>
+                    <ul>
+                        <li><a href="#">C</a></li>
+                        <li><a href="#">Ui Design</a></li>
+                        <li><a href="#">PHP</a></li>
+                        <li><a href="#">Java</a></li>
+                        <li><a href="#">Android Apps</a></li>
+                    </ul>
+                </section>
+                <section class="quicklinks">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Contribute</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </section>
+                <section class="contact">
+                    <h2>Contact Us</h2>
+                    <p><i class="fa fa-address-card"></i>H block Hostel</p>
+                    <p>
+                        <i class="fa fa-envelope"></i
+                        >kunalsrivastavgs2001@gmail.com
+                    </p>
+                    <p><i class="fa fa-phone-square"></i>Mobile. 0000000000</p>
+                    <p>
+                        <i class="fa fa-github"></i
+                        ><a
+                            href="https://github.com/kunalsrivastav"
+                            target="_blank"
+                            >kunalsrivastav</a
+                        >
+                    </p>
+                </section>
+            </section>
+            <section class="section2">
+                <h1>Register for Free</h1>
+                <a href="#">Sign Up!</a>
+            </section>
+            <section class="social">
+                <ul>
+                    <li>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-google"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                    </li>
+                </ul>
+            </section>
+            <section class="copyright">
+                <p>
+                    Copyright &copy; 2021 All Rights Reserved by Kunal Srivastav
+                </p>
+            </section>
+        </footer>
+    </body>
+</html>
