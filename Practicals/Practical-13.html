@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Practical - 13</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                box-sizing: border-box;
+            }
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                height: 100vh;
+                background-color: #a2d2ff;
+            }
+            table {
+                background-color: white;
+                padding: 0 10px 10px 10px;
+            }
+            caption {
+                background-color: white;
+                padding: 10px;
+                font-weight: bolder;
+                font-size: 20px;
+            }
+            table tr td {
+                padding: 5px;
+                width: 150px;
+            }
+            table tr:nth-child(1) td {
+                padding: 15px;
+                color: #21094e;
+                font-size: 25px;
+            }
+            table tr:nth-child(1) td i {
+                margin-right: 5px;
+            }
+            td:nth-child(1) {
+                background-color: #77d970;
+            }
+            td:nth-child(2) {
+                background-color: #2c2891;
+            }
+            td:nth-child(3) {
+                background-color: #f0a500;
+            }
+            td:nth-child(4) {
+                background-color: #1db9c3;
+            }
+            tr:nth-child(even) td {
+                background-color: white;
+            }
+            tr:nth-child(2) td {
+                color: #6ecb63;
+            }
+            .check {
+                color: darkgreen;
+            }
+            .cross {
+                color: red;
+            }
+            tr:last-child td a {
+                display: block;
+                text-decoration: none;
+                padding: 15px;
+                background-color: #210943;
+                color: white;
+                border-radius: 12px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <table>
+                <caption>
+                    Select Your Plan
+                </caption>
+                <tr>
+                    <td><i class="fa fa-building"></i>Basic</td>
+                    <td><i class="fa fa-plus"></i>Plus</td>
+                    <td><i class="fa fa-tv"></i>Deluxe</td>
+                    <td><i class="fa fa-spinner"></i>Pro</td>
+                </tr>
+                <tr>
+                    <td>Rs. 500/-</td>
+                    <td>Rs. 1500/-</td>
+                    <td>Rs. 2500/-</td>
+                    <td>Rs. 3500/-</td>
+                </tr>
+                <tr>
+                    <td>50 Pages</td>
+                    <td>75 Pages</td>
+                    <td>Unlimited</td>
+                    <td>Unlimited</td>
+                </tr>
+                <tr>
+                    <td>3 users</td>
+                    <td>5 users</td>
+                    <td>10 users</td>
+                    <td>Unlimited</td>
+                </tr>
+                <tr>
+                    <td>10 Sites</td>
+                    <td>25 Sites</td>
+                    <td>100 Sites</td>
+                    <td>Unlimited</td>
+                </tr>
+                <tr>
+                    <td>50 MB</td>
+                    <td>250 MB</td>
+                    <td>1 GB</td>
+                    <td>5 GB</td>
+                </tr>
+                <tr>
+                    <td>Included</td>
+                    <td>Included</td>
+                    <td>Included</td>
+                    <td>Included</td>
+                </tr>
+                <tr>
+                    <td class="check"><i class="fa fa-check"></i></td>
+                    <td class="check"><i class="fa fa-check"></i></td>
+                    <td class="check"><i class="fa fa-check"></i></td>
+                    <td class="check"><i class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td class="cross"><i class="fa fa-times"></i></td>
+                    <td class="check"><i class="fa fa-check"></i></td>
+                    <td class="check"><i class="fa fa-check"></i></td>
+                    <td class="check"><i class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td class="cross"><i class="fa fa-times"></i></td>
+                    <td class="check"><i class="fa fa-check"></i></td>
+                    <td class="check"><i class="fa fa-check"></i></td>
+                    <td class="check"><i class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td class="cross"><i class="fa fa-times"></i></td>
+                    <td class="cross"><i class="fa fa-times"></i></td>
+                    <td class="check"><i class="fa fa-check"></i></td>
+                    <td class="check"><i class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td class="cross"><i class="fa fa-times"></i></td>
+                    <td class="cross"><i class="fa fa-times"></i></td>
+                    <td class="cross"><i class="fa fa-times"></i></td>
+                    <td class="check"><i class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Sign Up</a></td>
+                    <td><a href="#">Sign Up</a></td>
+                    <td><a href="#">Sign Up</a></td>
+                    <td><a href="#">Sign Up</a></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
