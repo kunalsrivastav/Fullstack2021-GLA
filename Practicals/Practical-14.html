@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical - 14</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+
+        .main {
+            text-align: center;
+            background-color: #506D84;
+            height: 100vh;
+        }
+
+        .main h1 {
+            text-transform: uppercase;
+            padding: 30px;
+            color: #112031;
+            font-size: 40px;
+        }
+
+        .functions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            padding: 20px;
+            background-color: #FFB319;
+            color: #112031;
+        }
+
+        #decrement {
+            margin-right: 15px;
+        }
+
+        #increment {
+            margin-left: 15px;
+        }
+
+        .functions h2 {
+            color: #112031;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>Counter</h1>
+        <div class="functions">
+            <button id="decrement" onclick="decrease()">
+                <i class="fa fa-minus"></i>
+            </button>
+            <h2 id="value">0</h2>
+            <button id="increment" onclick="increase()">
+                <i class="fa fa-plus"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        var decrementButton = document.getElementById("decrement");
+        var incrementButton = document.getElementById("increment");
+        var displayValue = document.getElementById("value");
+        var currentValue = parseInt(displayValue.innerText);
+        update();
+
+        function decrease() {
+            if (currentValue > 0) {
+                currentValue--;
+            }
+            displayValue.innerText = currentValue;
+            update();
+        }
+
+        function increase() {
+            currentValue++;
+            displayValue.innerText = currentValue;
+            update();
+        }
+
+        function update() {
+            if (currentValue == 0) {
+                decrementButton.style.backgroundColor = "#FEC260";
+                decrementButton.disabled = true;
+            } else {
+                decrementButton.style.backgroundColor = "#FFB319"
+                decrementButton.disabled = false;
+            }
+        }
+    </script>
+</body>
+
+</html>

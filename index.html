@@ -1,117 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Full Stack Practical</title>
-        <link
-            rel="stylesheet"
-            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-            crossorigin="anonymous"
-        />
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: Arial, Helvetica, sans-serif;
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Stack Practical</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+        }
+
+        h2 {
+            color: #7d1935;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        caption {
+            border-radius: 12px 12px 0 0;
+            background-color: #34495e;
+            padding: 10px;
+            color: white;
+        }
+
+        table {
+            text-align: left;
+            line-height: 20px;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 2px solid #34495e;
+            width: 80%;
+            margin: 20px auto;
+            border-radius: 0 0 12px 12px;
+        }
+
+        thead tr:first-child {
+            color: black;
+            border: none;
+            line-height: 40px;
+        }
+
+        thead tr th:last-child {
+            text-align: center;
+            line-height: 40px;
+        }
+
+        thead tr th:nth-child(3) {
+            padding-left: 20px;
+        }
+
+        th:first-child,
+        td:first-child {
+            padding: 0 15px 0 20px;
+        }
+
+        thead th {
+            border-bottom: 3px solid black;
+        }
+
+        tbody tr:hover {
+            background-color: #f2f2f2;
+            cursor: default;
+        }
+
+        tbody tr:last-child td {
+            border: none;
+        }
+
+        tbody tr td:nth-child(1) {
+            width: 50px;
+        }
+
+        tbody tr td:nth-child(2) {
+            width: 450px;
+            padding-right: 10px;
+        }
+
+        tbody tr td:nth-child(3) {
+            padding-left: 10px;
+        }
+
+        tbody td {
+            border-bottom: 1px solid black;
+            height: 45px;
+        }
+
+        th:nth-child(4),
+        td:nth-child(4) {
+            text-align: center;
+        }
+
+        td:last-child {
+            text-align: center;
+        }
+
+        .edit:hover {
+            color: #0a79df;
+        }
+
+        .delete:hover {
+            color: #dc2a2a;
+        }
+
+        table tbody tr td a {
+            text-decoration: none;
+            color: grey;
+        }
+
+        table tbody tr td a:hover {
+            color: blue;
+        }
+
+        .submitted {
+            color: green;
+        }
+
+        .un-submitted {
+            color: red;
+        }
+
+        #loaderpage {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(#0F2027, #203A43, #2C5364);
+            flex-direction: column;
+        }
+
+        #loader {
+            border: 5px solid gray;
+            border-top: 5px solid lightgray;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
             }
-            h1 {
-                text-align: center;
-                font-size: 40px;
+
+            100% {
+                transform: rotate(360deg);
             }
-            h2 {
-                color: #7d1935;
-                text-align: center;
-                font-size: 30px;
-            }
-            caption {
-                border-radius: 12px 12px 0 0;
-                background-color: #34495e;
-                padding: 10px;
-                color: white;
-            }
-            table {
-                text-align: left;
-                line-height: 20px;
-                border-collapse: separate;
-                border-spacing: 0;
-                border: 2px solid #34495e;
-                width: 80%;
-                margin: 20px auto;
-                border-radius: 0 0 12px 12px;
-            }
-            thead tr:first-child {
-                color: black;
-                border: none;
-                line-height: 40px;
-            }
-            thead tr th:last-child {
-                text-align: center;
-                line-height: 40px;
-            }
-            thead tr th:nth-child(3) {
-                padding-left: 20px;
-            }
-            th:first-child,
-            td:first-child {
-                padding: 0 15px 0 20px;
-            }
-            thead th {
-                border-bottom: 3px solid black;
-            }
-            tbody tr:hover {
-                background-color: #f2f2f2;
-                cursor: default;
-            }
-            tbody tr:last-child td {
-                border: none;
-            }
-            tbody tr td:nth-child(1) {
-                width: 50px;
-            }
-            tbody tr td:nth-child(2) {
-                width: 450px;
-                padding-right: 10px;
-            }
-            tbody tr td:nth-child(3) {
-                padding-left: 10px;
-            }
-            tbody td {
-                border-bottom: 1px solid black;
-                height: 45px;
-            }
-            th:nth-child(4),
-            td:nth-child(4) {
-                text-align: center;
-            }
-            td:last-child {
-                text-align: center;
-            }
-            .edit:hover {
-                color: #0a79df;
-            }
-            .delete:hover {
-                color: #dc2a2a;
-            }
-            table tbody tr td a {
-                text-decoration: none;
-                color: grey;
-            }
-            table tbody tr td a:hover {
-                color: blue;
-            }
-            .submitted {
-                color: green;
-            }
-            .un-submitted {
-                color: red;
-            }
-        </style>
-    </head>
-    <body>
+        }
+
+        #loaderpage h3 {
+            margin-top: 10px;
+            color: gray;
+        }
+
+    </style>
+
+
+</head>
+
+<body onload="pageLoader()">
+    <div id="loaderpage">
+        <div id="loader"></div>
+        <h3>Loading</h3>
+    </div>
+    <div id="main">
         <h1>Welcome to the Full Stack Course</h1>
         <h2>List of Practicals</h2>
         <div class="main-container">
@@ -136,19 +199,12 @@
                             Online Sandbox Environment.
                         </td>
                         <td>
-                            <a
-                                href="./Practicals/Practical-1.html"
-                                target="_blank"
-                                >Practical-1</a
-                            >
+                            <a href="./Practicals/Practical-1.html" target="_blank">Practical-1</a>
                         </td>
                         <td class="submitted">Submitted</td>
                         <td>
                             <i title="edit" class="fa fa-pen edit"></i>
-                            <i
-                                title="delete"
-                                class="fa fa-trash-alt delete"
-                            ></i>
+                            <i title="delete" class="fa fa-trash-alt delete"></i>
                         </td>
                     </tr>
                     <tr>
@@ -158,38 +214,24 @@
                             using character Entities and span Tag.
                         </td>
                         <td>
-                            <a
-                                href="./Practicals/Practical-2.html"
-                                target="_blank"
-                                >Practical-2</a
-                            >
+                            <a href="./Practicals/Practical-2.html" target="_blank">Practical-2</a>
                         </td>
                         <td class="submitted">Submitted</td>
                         <td>
                             <i title="edit" class="fa fa-pen edit"></i>
-                            <i
-                                title="delete"
-                                class="fa fa-trash-alt delete"
-                            ></i>
+                            <i title="delete" class="fa fa-trash-alt delete"></i>
                         </td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Live your First Web-Page on Git-Hub.</td>
                         <td>
-                            <a
-                                href="./Practicals/Practical-3.html"
-                                target="_blank"
-                                >Practical-3</a
-                            >
+                            <a href="./Practicals/Practical-3.html" target="_blank">Practical-3</a>
                         </td>
                         <td class="submitted">Submitted</td>
                         <td>
                             <i title="edit" class="fa fa-pen edit"></i>
-                            <i
-                                title="delete"
-                                class="fa fa-trash-alt delete"
-                            ></i>
+                            <i title="delete" class="fa fa-trash-alt delete"></i>
                         </td>
                     </tr>
                     <tr>
@@ -199,19 +241,12 @@
                             their individual practical Page links.
                         </td>
                         <td>
-                            <a
-                                href="./Practicals/Practical-4.html"
-                                target="_blank"
-                                >Practical-4</a
-                            >
+                            <a href="./Practicals/Practical-4.html" target="_blank">Practical-4</a>
                         </td>
                         <td class="submitted">Submitted</td>
                         <td>
                             <i title="edit" class="fa fa-pen edit"></i>
-                            <i
-                                title="delete"
-                                class="fa fa-trash-alt delete"
-                            ></i>
+                            <i title="delete" class="fa fa-trash-alt delete"></i>
                         </td>
                     </tr>
                     <tr>
@@ -221,19 +256,12 @@
                             the Web Application.
                         </td>
                         <td>
-                            <a
-                                href="./Practicals/Practical-5.html"
-                                target="_blank"
-                                >Practical-5</a
-                            >
+                            <a href="./Practicals/Practical-5.html" target="_blank">Practical-5</a>
                         </td>
                         <td class="submitted">Submitted</td>
                         <td>
                             <i title="edit" class="fa fa-pen edit"></i>
-                            <i
-                                title="delete"
-                                class="fa fa-trash-alt delete"
-                            ></i>
+                            <i title="delete" class="fa fa-trash-alt delete"></i>
                         </td>
                     </tr>
                     <tr>
@@ -242,38 +270,24 @@
                             Create a Card Layout using CSS layout properties.
                         </td>
                         <td>
-                            <a
-                                href="./Practicals/Practical-6.html"
-                                target="_blank"
-                                >Practical-6</a
-                            >
+                            <a href="./Practicals/Practical-6.html" target="_blank">Practical-6</a>
                         </td>
                         <td class="submitted">Submitted</td>
                         <td>
                             <i title="edit" class="fa fa-pen edit"></i>
-                            <i
-                                title="delete"
-                                class="fa fa-trash-alt delete"
-                            ></i>
+                            <i title="delete" class="fa fa-trash-alt delete"></i>
                         </td>
                     </tr>
                     <tr>
                         <td>7</td>
                         <td>Create a Web Page Layout using div tags.</td>
                         <td>
-                            <a
-                                href="./Practicals/Practical-7.html"
-                                target="_blank"
-                                >Practical-7</a
-                            >
+                            <a href="./Practicals/Practical-7.html" target="_blank">Practical-7</a>
                         </td>
                         <td class="submitted">Submitted</td>
                         <td>
                             <i title="edit" class="fa fa-pen edit"></i>
-                            <i
-                                title="delete"
-                                class="fa fa-trash-alt delete"
-                            ></i>
+                            <i title="delete" class="fa fa-trash-alt delete"></i>
                         </td>
                     </tr>
                     <tr>
@@ -283,19 +297,12 @@
                             the given content.
                         </td>
                         <td>
-                            <a
-                                href="./Practicals/Practical-8.html"
-                                target="_blank"
-                                >Practical-8</a
-                            >
+                            <a href="./Practicals/Practical-8.html" target="_blank">Practical-8</a>
                         </td>
                         <td class="submitted">Submitted</td>
                         <td>
                             <i title="edit" class="fa fa-pen edit"></i>
-                            <i
-                                title="delete"
-                                class="fa fa-trash-alt delete"
-                            ></i>
+                            <i title="delete" class="fa fa-trash-alt delete"></i>
                         </td>
                     </tr>
                     <tr>
@@ -305,57 +312,36 @@
                             Navigation Bar.
                         </td>
                         <td>
-                            <a
-                                href="./Practicals/Practical-9.html"
-                                target="_blank"
-                                >Practical-9</a
-                            >
+                            <a href="./Practicals/Practical-9.html" target="_blank">Practical-9</a>
                         </td>
                         <td class="submitted">Submitted</td>
                         <td>
                             <i title="edit" class="fa fa-pen edit"></i>
-                            <i
-                                title="delete"
-                                class="fa fa-trash-alt delete"
-                            ></i>
+                            <i title="delete" class="fa fa-trash-alt delete"></i>
                         </td>
                     </tr>
                     <tr>
                         <td>10</td>
                         <td>Create a Responsive Side-Bar Navigation Menu.</td>
                         <td>
-                            <a
-                                href="./Practicals/Practical-10.html"
-                                target="_blank"
-                                >Practical-10</a
-                            >
+                            <a href="./Practicals/Practical-10.html" target="_blank">Practical-10</a>
                         </td>
                         <td class="submitted">Submitted</td>
                         <td>
                             <i title="edit" class="fa fa-pen edit"></i>
-                            <i
-                                title="delete"
-                                class="fa fa-trash-alt delete"
-                            ></i>
+                            <i title="delete" class="fa fa-trash-alt delete"></i>
                         </td>
                     </tr>
                     <tr>
                         <td>11</td>
                         <td>Create a Responsive Footer Template.</td>
                         <td>
-                            <a
-                                href="./Practicals/Practical-11.html"
-                                target="_blank"
-                                >Practical-11</a
-                            >
+                            <a href="./Practicals/Practical-11.html" target="_blank">Practical-11</a>
                         </td>
                         <td class="submitted">Submitted</td>
                         <td>
                             <i title="edit" class="fa fa-pen edit"></i>
-                            <i
-                                title="delete"
-                                class="fa fa-trash-alt delete"
-                            ></i>
+                            <i title="delete" class="fa fa-trash-alt delete"></i>
                         </td>
                     </tr>
                     <tr>
@@ -365,42 +351,42 @@
                             Records.
                         </td>
                         <td>
-                            <a
-                                href="./Practicals/Practical-12.html"
-                                target="_blank"
-                                >Practical-12</a
-                            >
+                            <a href="./Practicals/Practical-12.html" target="_blank">Practical-12</a>
                         </td>
                         <td class="submitted">Submitted</td>
                         <td>
                             <i title="edit" class="fa fa-pen edit"></i>
-                            <i
-                                title="delete"
-                                class="fa fa-trash-alt delete"
-                            ></i>
+                            <i title="delete" class="fa fa-trash-alt delete"></i>
                         </td>
                     </tr>
                     <tr>
                         <td>13</td>
                         <td>Create a Custom Price Table Template.</td>
                         <td>
-                            <a
-                                href="./Practicals/Practical-13.html"
-                                target="_blank"
-                                >Practical-13</a
-                            >
+                            <a href="./Practicals/Practical-13.html" target="_blank">Practical-13</a>
                         </td>
                         <td class="submitted">Submitted</td>
                         <td>
                             <i title="edit" class="fa fa-pen edit"></i>
-                            <i
-                                title="delete"
-                                class="fa fa-trash-alt delete"
-                            ></i>
+                            <i title="delete" class="fa fa-trash-alt delete"></i>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
-    </body>
+    </div>
+
+    <script>
+        function pageLoader() {
+            document.getElementById("main").style.display = "none";
+            setTimeout(loadPage, 3000);
+        }
+
+        function loadPage() {
+            document.getElementById("loaderpage").style.display = "none";
+            document.getElementById("main").style.display = "block";
+        }
+    </script>
+</body>
+
 </html>
